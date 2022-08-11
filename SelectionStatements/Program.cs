@@ -1,28 +1,32 @@
 ﻿var r = new Random();
 var favNumber = r.Next(1, 100);
+var userInput = 0;
 
-Console.WriteLine("Try to guess my random number between 1 - 100:");
-Console.WriteLine();
-var userInput = int.Parse(Console.ReadLine());
+do
+{
+    Console.WriteLine("Try to guess my random number between 1 - 100:");
+    Console.WriteLine();
+    userInput = int.Parse(Console.ReadLine());
 
-//while(userInput != 0)
-//{
     if (userInput < favNumber)
     {
         Console.WriteLine();
         Console.WriteLine("too low");
+        Console.WriteLine();
     }
     else if (userInput > favNumber)
     {
         Console.WriteLine();
         Console.WriteLine("too high");
+        Console.WriteLine();
     }
     else
     {
         Console.WriteLine();
         Console.WriteLine("Nevermind");
+        Console.WriteLine();
     }
-//}
+} while (userInput != favNumber);
 
 Console.WriteLine("What is your favorite school subject? " +
     "Enter - math, science, history, language arts, pe, music, or other below: ");
@@ -69,7 +73,7 @@ switch (favSubject.ToLower())
             "\nbecomes a sort of spirit, and never dies. - Edward " +
             "Bulwer-Lytton");
         break;
-        default:
+    default:
         Console.WriteLine();
         Console.WriteLine("Let yourself be silently drawn" +
             "\nby the strange pull of what you really love." +
